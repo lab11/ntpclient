@@ -41,7 +41,7 @@ struct ntp_packet_t {
 
 	/*! 32 bits. Total round trip delay time. */
 	uint32_t rootDelay;
-	/*! 32 bits. Max error aloud from primary clock source. */
+	/*! 32 bits. Max error allowed from primary clock source. */
 	uint32_t rootDispersion;
 	/*! 32 bits. Reference clock identifier. */
 	uint32_t refId;

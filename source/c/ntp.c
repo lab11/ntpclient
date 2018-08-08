@@ -146,7 +146,7 @@ otError ntp_client_begin(otInstance* instance,
 		return OT_ERROR_PARSE;
 	if (!ntp_client)
 		return OT_ERROR_PARSE;
-	if (ntp_client->state)
+	if (ntp_client->state == NTP_CLIENT_SENT)
 		return OT_ERROR_ALREADY;
 
 	/* Create and zero out the state. */
