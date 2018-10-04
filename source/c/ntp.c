@@ -323,8 +323,13 @@ static void ntp_client_recv_timeout(struct ntp_client_t* const ntp_client) {
 		return;
 	}
 
-	/* Record the failure */
+  /* Record the failure */
 	ntp_client->state = NTP_CLIENT_TIMEOUT;
+
+  /* If there's a handler, call it now */
+	if (ntp_client->handler) {
+		(ntp_client->handler)(ntp_client);
+	}
 }
 
 /*!
