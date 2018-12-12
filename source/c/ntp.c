@@ -178,7 +178,7 @@ otError ntp_client_begin(otInstance* instance,
 	 */
 
 	otMessageInfo msg_info;
-	otMessage* msg = otUdpNewMessage(instance, true);
+	otMessage* msg = otUdpNewMessage(instance, NULL);
 	if (!msg) {
 		/* Record new state */
 		ntp_client->state = NTP_CLIENT_INT_ERR;

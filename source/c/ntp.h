@@ -11,7 +11,6 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <sys/time.h>
-#include <openthread/types.h>
 #include <openthread/ip6.h>
 #include <openthread/udp.h>
 
